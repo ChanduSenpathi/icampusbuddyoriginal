@@ -1,0 +1,709 @@
+@font-face {
+    font-family: "satoshi-variable-bold";
+    src: url('./GeneralSans_Complete/Fonts/OTF/GeneralSans-Bold.otf');
+}
+
+@font-face {
+    font-family: "satoshi-variable-light";
+    src: url('./GeneralSans_Complete/Fonts/OTF/GeneralSans-Light.otf');
+}
+
+@font-face {
+    font-family: "satoshi-variable-medium";
+    src: url('./GeneralSans_Complete/Fonts/OTF/GeneralSans-Medium.otf');
+}
+
+@font-face {
+    font-family: "satoshi-variable-light";
+    src: url();
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    scroll-behavior: smooth;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    color: black;
+}
+
+body {
+    background-color: #F8F4FF;
+}
+
+.nav_container {
+    background: #1F2D3E;
+    padding: 9px 30px 10px 30px;
+    z-index: 100000000;
+}
+
+.header_container {
+    z-index: 1000000000;
+}
+
+.menuicon {
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    color: white;
+    margin-left: 50px;
+    margin-right: 30px;
+}
+
+.dropdownlist_container,
+.dropdownlist_nums {
+    box-sizing: content-box;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 2px;
+    color: #8A8A8A;
+    font-size: 12px;
+
+}
+
+.dropdownlist_nums {
+    margin-left: 20px;
+}
+
+.common_profile_text {
+    font-size: 12px;
+    font-family: "satoshi-variable-medium";
+}
+
+/* sidebar */
+.aside_container {
+    padding-top: 60px;
+    max-width: 201px;
+    min-height: 954px;
+    background-color: white;
+    z-index: 1000;
+    position: absolute;
+    left: 0;
+}
+
+.sidebar_finaldashboard {
+    font-size: 12px;
+    font-weight: 700;
+    font-family: 'satoshi-variable-bold';
+}
+
+.aside_list {
+    height: 50px;
+    background: #F8F4FF;
+    color: #5B3DA6;
+    padding: 10px;
+    position: relative;
+}
+
+.aside_list::before {
+    position: absolute;
+    content: '';
+    top: 14%;
+    left: -3%;
+    height: 40px;
+    width: 10px;
+    background-color: #5B3DA6;
+    border-radius: 30px;
+}
+
+.aside_list>i {
+    color: #1F2D3E;
+}
+
+.aside_sub_container {
+    margin: 0px 25px 0px 20px;
+    border-left: 0.5px solid #BCC0C5;
+}
+
+.sub_list_items, .pos_text, .active_text {
+    color: #8A8A8A;
+    font-size: 12px;
+    padding-left: 22px;
+    font-family: "satoshi-variable-light";
+    position: relative;
+}
+
+.sub_list_container {
+    position: relative;
+}
+
+.active_text {
+    color: #212121;
+}
+
+.sub_list_container::before {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 0%;
+    background-color: #BCC0C5;
+    width: 12px;
+    height: 1px;
+}
+
+.active {
+    position: relative;
+    color: #212121;
+}
+
+.active::after {
+    position: absolute;
+    content: '';
+    top: 45%;
+    left: 5%;
+    background-color: #5B3DA6;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+}
+
+.sub_list_items:is(:hover)::before {
+    font-family: "satoshi-variable-bold";
+    position: absolute;
+    content: '';
+    top: 35%;
+    left: 5%;
+    background-color: #5B3DA6;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+}
+
+.pos_text:is(:hover)::before {
+    font-family: "satoshi-variable-bold";
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 15%;
+    background-color: #5B3DA6;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+}
+
+
+
+.sidebar_pos_container {
+    position: relative;
+}
+
+.sidebar_pos_container::before {
+    position: absolute;
+    content: '';
+    top: 100%;
+    left: 0;
+    width: 12px;
+    height: 1px;
+    background-color: #BCC0C5;
+}
+
+.pos_text {
+    position: absolute;
+    bottom: -25%;
+    left: 0;
+}
+
+.main_container {
+    margin-left: 201px;
+    padding-top: 64px;
+    width: 100%;
+}
+
+.dashboard_header_container {
+    background-color: white;
+    padding: 11px 30px 11px 25px;
+}
+
+.final_dashboard {
+    color: #8A8A8A;
+    font-family: "satoshi-variable-light";
+    font-size: 14px;
+}
+
+.final_dashboard+i {
+    color: #1F2D3E;
+    font-size: 14px;
+}
+
+.school_dashboard_text {
+    color: #212121;
+    font-size: 14px;
+    font-family: "satoshi-variable-light";
+}
+
+.dashboard_main_container {
+    padding: 30px;
+}
+
+.dashboard_inner_container {
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.initial_anim_1 {
+    animation: left_to_right .5s linear 1 forwards;
+    opacity: 0;
+}
+
+@keyframes left_to_right {
+    0% {
+        transform: translateX(-600px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.initial_anim_2 {
+    animation: right_to_left .5s linear 1 forwards;
+    opacity: 0;
+}
+
+@keyframes right_to_left {
+    0% {
+        transform: translateX(600px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.general_snapshot_text {
+    font-size: 22px;
+    color: #212121;
+    padding-bottom: 30px;
+    font-family: "satoshi-variable-bold";
+}
+
+.report_bug_btn {
+    border: none;
+    background-color: transparent;
+    font-size: 11px;
+    color: #5B38A8;
+    font-family: "satoshi-variable-medium";
+}
+
+.bug_image {
+    width: 14px;
+    height: 13px;
+}
+
+.common_card {
+    /* max-width: 255px; */
+    border-radius: 10px;
+    box-sizing: border-box;
+    transition: all 0.5s ease;
+    padding: 2px;
+}
+
+.common_card:hover{
+    scale: 1.1;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+
+
+.card_8:hover {
+    background: linear-gradient(45deg, #e4defe, white, #e4defe);
+    box-shadow: 0px 0px 10px grey;
+}
+
+.card_9:hover {
+    background: linear-gradient(45deg, #fdd7e1, white, #fdd7e1);
+    box-shadow: 0px 0px 10px grey;
+}
+
+.card_10:hover {
+    background: linear-gradient(45deg, #d9f5fc, white, #d9f5fc);
+    box-shadow: 0px 0px 10px grey;
+}
+
+.card_11:hover {
+    background: linear-gradient(45deg, #f9e5d5, white, #f9e5d5);
+    box-shadow: 0px 0px 10px grey;
+}
+
+.card_12:hover {
+    background: linear-gradient(45deg, #fdf1d7, white, #fdf1d7);
+    box-shadow: 0px 0px 10px grey;
+}
+
+.card_13:hover {
+    background: linear-gradient(45deg, #dbecff, white, #dbecff);
+    box-shadow: 0px 0px 10px grey;
+}
+
+.card_14:hover {
+    background: linear-gradient(45deg, #d9ffef, white, #d9ffef);
+    box-shadow: 0px 0px 10px grey;
+}
+
+
+.common_header_text {
+    font-size: 16px;
+    color: #212121;
+    font-family: "satoshi-variable-bold";
+}
+
+.card_1 {
+    background-color: #FFF5E1;
+    border-radius: 10px;
+}
+
+.inner_image_1 {
+    background: url('./images/image1.png') no-repeat bottom right;
+    /* padding: 30px 0px 19px 17px; */
+}
+
+.card_2 {
+    background-color: #E1FEF7;
+    border-radius: 10px;
+}
+
+.inner_image_2 {
+    background: url('./images/image2.png') no-repeat bottom right;
+    padding: 30px 0px 19px 17px;
+}
+
+.card_3 {
+    background-color: #FFF8DC;
+    border-radius: 10px;
+}
+
+.inner_image_3 {
+    background: url('./images/image3.png') no-repeat bottom right;
+    padding: 30px 0px 19px 17px;
+}
+
+.card_4 {
+    background-color: #EAFFE5;
+    border-radius: 10px;
+}
+
+.inner_image_4 {
+    background: url('./images/image4.png') no-repeat bottom right;
+    padding: 30px 0px 19px 17px;
+}
+
+.card_5 {
+    background-color: #E4F2FF;
+    border-radius: 10px;
+}
+
+.inner_image_5 {
+    background: url('./images/image5.png') no-repeat bottom right;
+    padding: 30px 0px 19px 17px;
+}
+
+.card_6 {
+    background-color: #FFEFEF;
+    border-radius: 10px;
+}
+
+.inner_image_6 {
+    background: url('./images/image6.png') no-repeat bottom right;
+    padding: 30px 0px 19px 17px;
+}
+
+.card_7 {
+    background-color: #E4F9FF;
+    border-radius: 10px;
+}
+
+.inner_image_7 {
+    background: url('./images/image7.png') no-repeat bottom right;
+    padding: 30px 0px 19px 17px;
+}
+
+.card_8 {
+    background-color: #F1EEFF;
+}
+
+.inner_image_8 {
+    background: url('./images/image8.png') no-repeat bottom right;
+    padding: 30px 0px 19px 17px;
+}
+
+.card_9 {
+    background-color: #FFEFF3;
+}
+
+.inner_image_9 {
+    background: url('./images/image9.png') no-repeat bottom right;
+    padding: 30px 0px 19px 17px;
+}
+
+.card_10 {
+    background-color: #E4F9FF;
+}
+
+.inner_image_10 {
+    background: url('./images/image10.png') no-repeat bottom right;
+    padding: 30px 0px 19px 17px;
+}
+
+.card_11 {
+    background-color: #FFEEE1;
+}
+
+.inner_image_11 {
+    background: url('./images/image11.png') no-repeat bottom right;
+    padding: 30px 0px 19px 17px;
+}
+
+.card_12 {
+    background-color: #FFF5E1;
+}
+
+.inner_image_12 {
+    background: url('./images/image12.png') no-repeat bottom right;
+    padding: 30px 0px 19px 17px;
+}
+
+.card_13 {
+    background-color: #E4F1FF;
+}
+
+.inner_image_13 {
+    background: url('./images/image13.png') no-repeat bottom right;
+    padding: 30px 0px 19px 17px;
+}
+
+.card_14 {
+    background-color: #E2FFF3;
+}
+
+.inner_image_14 {
+    background: url('./images/image14.png') no-repeat bottom right;
+    padding: 30px 0px 19px 17px;
+}
+
+.inner_card_text_1,
+.inner_card_text_2,
+.inner_card_text_3,
+.inner_card_text_4,
+.inner_card_text_5,
+.inner_card_text_6,
+.inner_card_text_7,
+.inner_card_text_8,
+.inner_card_text_9,
+.inner_card_text_10,
+.inner_card_text_11,
+.inner_card_text_12,
+.inner_card_text_13,
+.inner_card_text_14 {
+    font-size: 36px;
+    font-family: "satoshi-variable-medium";
+    color: #9F6C01;
+    letter-spacing: 1px;
+    padding-bottom: 19px;
+}
+
+.inner_card_text_2 {
+    color: #00785B;
+}
+
+.inner_card_text_3 {
+    color: #EB8D00;
+}
+
+.inner_card_text_4 {
+    color: #6EBE5A;
+}
+
+.inner_card_text_5 {
+    color: #52AFFF;
+}
+
+.inner_card_text_6 {
+    color: #D37577;
+}
+
+.inner_card_text_7 {
+    color: #009DCA;
+}
+
+.inner_card_text_8 {
+    color: #4434A5;
+}
+
+.inner_card_text_9 {
+    color: #E83D62;
+}
+
+.inner_card_text_10 {
+    color: #4FC3F7;
+}
+
+.inner_card_text_11 {
+    color: #C1773D;
+}
+
+.inner_card_text_12 {
+    color: #F29C1F;
+}
+
+.inner_card_text_13 {
+    color: #6B95C8;
+}
+
+.inner_card_text_14 {
+    color: #57BE92;
+}
+
+
+
+.hide_aside {
+    left: -200px;
+    transition: all .5s linear;
+}
+
+.show_aside {
+    left: 0%;
+    transition: all .5s linear;
+}
+
+.show_main {
+    margin-left: 201px;
+    transition: all .5s linear;
+}
+
+.hide_main {
+    margin-left: 0px;
+    transition: all .5s linear;
+}
+
+
+.reveal {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.reveal.active_container {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.profile_popup {
+    margin-top: 64px;
+    position: absolute;
+    top: -500px;
+    right: 0%;
+    background-color: rgb(233, 228, 240);
+    z-index: 100;
+    max-width: 400px;
+    /* width: 300px; */
+    border-bottom-left-radius: 12px;
+    transition: all .5s ease;
+}
+
+.hide_profile {
+    top: -500px;
+}
+.show_profile {
+    top: 0;
+}
+.common_icon {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid grey;
+}
+
+.common_border_bottom {
+    border-bottom: 1px solid rgb(191, 191, 191);
+}
+
+
+.additional_styling_1::before, .additional_styling_2::before,
+.additional_styling_3::before, .additional_styling_4::before,
+.additional_styling_5::before, .additional_styling_6::before,
+.additional_styling_7::before{
+    position: absolute;
+    content: '';
+    display: block;
+    background-image: linear-gradient(90deg, #ffaa00 , #ffaa00 100%);
+    height: 700px;
+    width: 700px;
+    z-index: 0;
+    opacity: 0;
+}
+
+.additional_styling_1:hover::before, 
+.additional_styling_2:hover::before, 
+.additional_styling_3:hover::before, 
+.additional_styling_4:hover::before, 
+.additional_styling_5:hover::before, 
+.additional_styling_6:hover::before, 
+.additional_styling_7:hover::before {
+    opacity: 1;
+    animation: rotate 15s linear infinite;
+}
+
+.additional_styling_2::before {
+    background-image: linear-gradient(90deg, #00ffc3 , #00ffc3 100%);
+}
+
+.additional_styling_3::before {
+    background-image: linear-gradient(90deg, #ffcc00 , #ffcc00 100%);
+}
+
+.additional_styling_4::before {
+    background-image: linear-gradient(90deg, #33ff00 , #33ff00 100%);
+}
+
+.additional_styling_5::before {
+    background-image: linear-gradient(90deg, #0084ff , #0084ff 100%);
+}
+
+.additional_styling_6::before {
+    background-image: linear-gradient(90deg, #ff0000 , #ff0000 100%);
+}
+
+.additional_styling_7::before {
+    background-image: linear-gradient(90deg, #00c8ff , #00c8ff 100%);
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+@media screen and (max-width: 567px) {
+    .main_container {
+        margin-left: 0px;
+    }
+    .menuicon {
+        margin-left: 20px;
+        margin-right: 10px;
+    }
+}
